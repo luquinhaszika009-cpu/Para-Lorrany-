@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Para Lorrany</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#111;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+font-family:Georgia,serif;
+overflow:hidden;
+}
+.envelope{
+
+position:relative;
+
+width:320px;
+
+height:210px;
+
+cursor:pointer;
+
+}
+
+.frente{
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+background:#d8bea5;
+
+border-radius:8px;
+
+box-shadow:0 20px 45px rgba(0,0,0,.45);
+
+z-index:3;
+
+}
+
+.aba{
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:105px;
+
+background:#c7ab8d;
+
+clip-path:polygon(0 0,100% 0,50% 100%);
+
+z-index:4;
+transform-origin:top;
+transition:.8s;
+}
+.envelope.aberto .aba{
+
+transform:rotateX(180deg);
+
+}
+.envelope.aberto .carta{
+
+z-index:6;
+
+animation:abrirCarta 1.2s ease forwards;
+
+}
+.texto{
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:5;
+
+pointer-events:none;
+
+}
+
+.texto h1{
+
+font-size:28px;
+
+color:#3d3228;
+
+text-align:center;
+
+padding:0 20px;
+
+}
+
+.texto p{
+
+margin-top:14px;
+
+font-size:18px;
+
+color:#5d4e42;
+
+}
+.carta{
+
+position:absolute;
+
+left:10px;
+bottom:10px;
+
+width:300px;
+height:190px;
+
+background:#fffaf2;
+
+border-radius:6px;
+
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+
+padding:40px;
+
+overflow-y:auto;
+
+z-index:2;
+
+transition:1s ease;
+
+font-size:15px;
+
+line-height:1.8;
+
+color:#3d3228;
+
+font-family:Georgia,serif;
+
+text-align:left;
+
+scroll-behavior:smooth;
+
+}
+.carta h2{
+
+text-align:center;
+
+margin-bottom:25px;
+
+font-size:20px;
+
+font-weight:normal;
+
+}
+
+.carta p{
+
+margin-bottom:20px;
+
+}
+.envelope.aberto .texto{
+
+opacity:0;
+
+transition:.4s;
+
+}
+.envelope.aberto .frente{
+
+opacity:0;
+
+transition:.4s;
+
+transition-delay:.6s;
+
+}
+.carta h2{
+
+font-size:28px;
+
+margin-bottom:25px;
+
+text-align:center;
+
+font-weight:normal;
+
+}
+
+.carta p{
+
+font-size:18px;
+
+margin-bottom:18px;
+
+text-align:justify;
+
+line-height:1.7;
+
+}
+@keyframes abrirCarta{
+
+0%{
+
+left:10px;
+bottom:10px;
+
+width:300px;
+height:190px;
+
+transform:none;
+
+}
+
+40%{
+
+left:10px;
+bottom:250px;
+
+width:300px;
+height:190px;
+
+transform:none;
+
+}
+
+100%{
+
+left:50%;
+top:50%;
+bottom:auto;
+
+width:90vw;
+max-width:700px;
+
+height:85vh;
+
+transform:translate(-50%,-50%);
+
+}
+
+}
+</style>
+
+</head>
+
+<body>
+<div class="envelope" onclick="abrirEnvelope()">
+
+    <div class="carta">
+<h2>Para você, Lorrany Beatriz Batista.</h2>
+
+<p>Eu nem lembro o dia em que conheci você.</p>
+
+<p>E, durante muito tempo, isso me incomodou.</p>
+
+<p>Eu queria guardar essa data como quem guarda um aniversário importante. Queria lembrar exatamente quando tudo começou.</p>
+
+<p>Mas, pensando melhor...</p>
+
+<p>Talvez isso nunca tenha sido o mais importante.</p>
+
+<p>Porque, mesmo sem lembrar do dia em que conheci você, eu nunca consegui esquecer tudo o que veio depois.</p>
+
+<p>Eu conheci você dentro de um jogo.</p>
+
+<p>E aquele dia, que parecia que eu só iria entrar em uma room com pessoas qualquer, acabou se tornando o começo de uma das amizades mais importantes da minha vida.</p>
+
+<p>No começo eu era chato.</p>
+
+<p>Fazia brincadeiras de mau gosto.</p>
+
+<p>Te deixava com raiva.</p>
+
+<p>E, sinceramente...</p>
+
+<p>Queria te pedir desculpas por isso.</p>
+
+<p>Porque, se eu soubesse que a nossa história significaria tanto pra mim, eu teria te tratado diferente desde o primeiro dia.</p>
+
+<p>Mas, mesmo assim...</p>
+
+<p>Você não desistiu de mim.</p>
+
+<p>E eu acho que foi aí que tudo começou.</p>
+
+<p>Eu não sei explicar exatamente como essa amizade criou uma conexão tão forte.</p>
+
+<p>Só sei que, em algum momento, conversar com você deixou de ser só conversar.</p>
+
+<p>A gente começou a dividir os nossos sentimentos.</p>
+
+<p>Os nossos medos.</p>
+
+<p>As nossas dúvidas.</p>
+
+<p>As nossas noites.</p>
+
+<p>E, sem perceber...</p>
+
+<p>Você virou a única pessoa com quem eu conseguia me abrir daquele jeito.</p>
+
+<p>Hoje eu percebo uma coisa.</p>
+
+<p>Eu fiquei mais aberto.</p>
+
+<p>Mas foi só com você.</p>
+
+<p>E acho que isso diz muito sobre quem você é pra mim.</p>
+
+<p>Pra mim, nós somos almas gêmeas.</p>
+
+<p>E eu não digo isso num sentido romântico.</p>
+
+<p>Eu digo num sentido puro.</p>
+
+<p>Porque eu nunca precisei fingir ser alguém quando conversava com você.</p>
+
+<p>Eu podia simplesmente ser eu.</p>
+
+<p>E você me entendia.</p>
+
+<p>Talvez essa seja a qualidade que eu mais admiro em você.</p>
+
+<p>Você não só respondia o que eu dizia.</p>
+
+<p>Você realmente me escutava.</p>
+
+<p>E acho que você nunca vai entender o quanto isso fez diferença pra mim.</p>
+
+<p>Ser escutado de verdade é uma das sensações mais bonitas que alguém pode sentir.</p>
+
+<p>Com o tempo, as nossas conversas foram ficando cada vez mais profundas.</p>
+
+<p>Parecia que existia uma magia nelas.</p>
+
+<p>Era tudo tão natural...</p>
+
+<p>Tão leve...</p>
+
+<p>Que, até hoje, eu sinto saudades daquelas conversas.</p>
+
+<p>Todos os dias.</p>
+
+<p>Se eu pudesse voltar no tempo por alguns minutos...</p>
+
+<p>Provavelmente escolheria voltar para uma daquelas noites.</p>
+
+<p>Só pra sentir de novo como era conversar com você sem perceber as horas passando.</p>
+
+<p>Eu não vou esquecer da vez que você disse que tinha sido atropelada.</p>
+
+<p>Eu fiquei preocupado de verdade.</p>
+
+<p>Depois descobri que você só estava no dentista.</p>
+
+<p>Você fez aquilo porque lembrou da brincadeira que eu tinha feito dizendo que era adotado.</p>
+
+<p>Hoje eu rio quando lembro disso.</p>
+
+<p>Pra qualquer outra pessoa isso pode parecer uma lembrança boba.</p>
+
+<p>Mas, pra mim...</p>
+
+<p>São essas pequenas coisas que fizeram a nossa amizade ser tão especial.</p>
+
+<p>Teve até um sonho que ficou guardado comigo.</p>
+
+<p>Eu sonhei que a gente estava caminhando.</p>
+
+<p>Você estava com um cachorrinho.</p>
+
+<p>E eu estava com um gatinho marrom.</p>
+
+<p>Até hoje eu lembro da cor dele.</p>
+
+<p>Pode parecer estranho...</p>
+
+<p>Mas é um daqueles detalhes que eu nunca consegui esquecer.</p>
+
+<p>Obrigado por querer ser minha amiga.</p>
+
+<p>Obrigado por ter escolhido se aproximar de mim.</p>
+
+<p>Obrigado por existir na minha vida.</p>
+
+<p>O carinho que eu sinto por você é completamente sincero.</p>
+
+<p>Não existe segunda intenção.</p>
+
+<p>Nunca existiu.</p>
+
+<p>É só um carinho tão grande que, às vezes, nem eu consigo explicar direito.</p>
+
+<p>Hoje as coisas mudaram um pouco.</p>
+
+<p>Você sabe que eu estou conhecendo outra pessoa.</p>
+
+<p>E isso acabou mudando parte da minha rotina.</p>
+
+<p>Mas eu preciso que você saiba de uma coisa.</p>
+
+<p>Por favor...</p>
+
+<p>Nunca pense que você fez alguma coisa errada.</p>
+
+<p>Nunca pense que você atrapalhou a minha vida.</p>
+
+<p>Nunca pense que você foi um problema.</p>
+
+<p>Você nunca foi.</p>
+
+<p>Se hoje eu apareço menos...</p>
+
+<p>Não é porque você deixou de ser importante.</p>
+
+<p>É porque a minha vida mudou.</p>
+
+<p>Só isso.</p>
+
+<p>E eu não queria simplesmente desaparecer.</p>
+
+<p>Você merecia saber o motivo.</p>
+
+<p>Porque você merece essa explicação.</p>
+
+<p>Quando você disse:</p>
+
+<p><em>"Nem parece que somos forever."</em></p>
+
+<p>Aquilo ficou na minha cabeça.</p>
+
+<p>Doeu.</p>
+
+<p>Doeu porque eu entendi por que você sentiu aquilo.</p>
+
+<p>E eu sinto muito por ter feito você pensar dessa forma.</p>
+
+<p>Mas eu preciso te pedir uma coisa.</p>
+
+<p>Mesmo que a gente não converse todos os dias...</p>
+
+<p>Mesmo que a vida siga caminhos diferentes...</p>
+
+<p>Por favor...</p>
+
+<p>Nunca deixa a nossa conexão morrer.</p>
+
+<p>Esse talvez seja o meu maior medo.</p>
+
+<p>Não é perder você.</p>
+
+<p>É perder aquilo que a gente construiu.</p>
+
+<p>Eu ainda quero mandar vídeos de bebê pra você.</p>
+
+<p>Ainda quero receber os vídeos sem graça que você manda.</p>
+
+<p>Ainda quero saber que, em algum lugar do mundo, existe uma pessoa que me conhece de um jeito que quase ninguém conhece.</p>
+
+<p>Quando eu penso em você daqui a alguns anos...</p>
+
+<p>Eu não penso necessariamente na gente conversando todos os dias.</p>
+
+<p>Eu só espero uma coisa.</p>
+
+<p>Que você seja feliz.</p>
+
+<p>Muito feliz.</p>
+
+<p>Do jeito que você sempre sonhou.</p>
+
+<p>Porque, sinceramente...</p>
+
+<p>Se você estiver feliz...</p>
+
+<p>Acho que eu também vou ficar.</p>
+
+<p>Talvez eu não lembre o dia em que conheci você.</p>
+
+<p>Mas tenho certeza de que vou lembrar, pelo resto da minha vida, da sorte que eu tive por ter conhecido alguém como você.</p>
+
+<p>E, por favor...</p>
+
+<p>Não pensa que essa carta é um adeus.</p>
+
+<p>Ela também não é um ponto final.</p>
+
+<p>Ela é só uma reticência...</p>
+
+<p>Porque, independente de quantas vezes a vida mude...</p>
+
+<p>Eu espero que a gente nunca deixe de ser...</p>
+
+<p><strong>forever.</strong></p>
+
+<p>Com carinho,</p>
+
+<p><strong>Lucas.</strong></p>
+
+<br>
+
+<p><em>A Lua está linda hoje... 🤍</em></p>
+
+<p><em>(Depois pesquise o significado disso.)</em></p>
+
+</div>
+
+    <div class="frente"></div>
+
+    <div class="aba"></div>
+
+    <div class="texto">
+
+        <h1>Para Lorrany<br>Beatriz Batista.</h1>
+
+        <p>Toque para abrir.</p>
+
+    </div>
+
+</div>
+
+<script>
+
+function abrirEnvelope(){
+
+document.querySelector(".envelope").classList.add("aberto");
+
+}
+
+</script>
+<!-- Tudo começou no Motel Perdição.
+Se você está lendo isso...
+Obrigado por existir.
+🤍 -->
+</body>
+
+</html>
